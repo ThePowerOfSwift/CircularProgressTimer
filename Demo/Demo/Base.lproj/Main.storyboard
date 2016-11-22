@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-ep-D6W" customClass="CircularProgress" customModule="Demo" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwg-ep-D6W" secondAttribute="height" multiplier="1:1" id="8rI-z5-53V"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60E-Z3-Ozq">
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0024333981230000002" green="0.028480675970000001" blue="0.1992389896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTN-6A-WY5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZ2-q9-GGU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GbB-h3-scZ"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.019607843140000001" green="0.0099339839780000008" blue="0.1089982551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zhk-OJ-4xj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xZ2-q9-GGU" firstAttribute="top" secondItem="60E-Z3-Ozq" secondAttribute="bottom" constant="20" id="367-AN-Dp0"/>
+                            <constraint firstItem="nwg-ep-D6W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="7Wn-g8-vR8"/>
+                            <constraint firstItem="60E-Z3-Ozq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ape-Ua-KUh"/>
+                            <constraint firstItem="xZ2-q9-GGU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RiB-9S-yVY"/>
+                            <constraint firstItem="nwg-ep-D6W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="YPC-kT-rAd"/>
+                            <constraint firstItem="60E-Z3-Ozq" firstAttribute="top" secondItem="nwg-ep-D6W" secondAttribute="bottom" constant="50" id="rwc-bp-yz4"/>
+                            <constraint firstAttribute="trailing" secondItem="nwg-ep-D6W" secondAttribute="trailing" constant="50" id="u1c-YD-tHc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circularProgressView" destination="nwg-ep-D6W" id="Xoa-yT-uG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
